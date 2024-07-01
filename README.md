@@ -13,6 +13,7 @@ Main Goal: Plan and develop the proposed specification using [MVVM Architecture]
     - If you’re transitioning from Unity, [compare the two engines](https://docs.cocos.com/creator/3.8/manual/en/guide/unity/).
 
 - Install [Node.js](https://nodejs.org/en/download/package-manager).
+    - If you are on MacOS, prefer to use [Homebrew](https://brew.sh/) for the [installation](https://formulae.brew.sh/formula/node).
     - Before opening the project, run `npm install` in the root directory.
     - [NPM](https://www.npmjs.com/about) is a library registry and a package manager.
 
