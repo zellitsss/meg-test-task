@@ -1,4 +1,4 @@
-import { _decorator, Component, Node } from 'cc';
+import { _decorator, Component, JsonAsset, Node } from 'cc';
 import { GameState } from './GameState';
 import { interval } from 'rxjs';
 const { ccclass, property } = _decorator;
@@ -11,6 +11,9 @@ export class GameManagerComponent extends Component {
 
     @property(Node)
     signPostBtn: Node = null;
+
+    @property(JsonAsset)
+    initialState: JsonAsset = null;
 
     private _gameState: GameState = new GameState();
     public get gameState(): GameState {
@@ -35,8 +38,10 @@ export class GameManagerComponent extends Component {
     }
 
     protected start(): void {
-        interval(1000).subscribe(value => {
-            this.gameState.currency++;
-        });
+        this.initializeState();
+    }
+
+    protected initializeState() {
+        Object.assign(this.gameState, this.initialState.json.state);
     }
 }
