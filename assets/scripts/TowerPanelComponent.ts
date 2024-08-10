@@ -1,6 +1,5 @@
-import { _decorator, Component, EventTouch, Node, tween, UITransform, Vec3, Widget } from 'cc';
+import { _decorator, Component, tween, UITransform, Widget } from 'cc';
 import { GameManagerComponent } from './GameManagerComponent';
-import { fromEvent, pipe, take } from 'rxjs';
 const { ccclass, property } = _decorator;
 
 @ccclass('TowerPanelComponent')
