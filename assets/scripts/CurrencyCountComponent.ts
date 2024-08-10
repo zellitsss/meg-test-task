@@ -12,9 +12,17 @@ export class CurrencyCountComponent extends Component {
     }
 
     protected start(): void {
-        if (this.label != null && GameManagerComponent.instance != null)
-        {
-            this.label.string = GameManagerComponent.instance.gameState.currency.toString();
+        if (GameManagerComponent.instance != null) {
+            // Need to fetch the original value first
+            this.onCurrencyChanged(GameManagerComponent.instance.gameState.currency);
+            GameManagerComponent.instance.gameState.onCurrencyChanged$.subscribe(this.onCurrencyChanged.bind(this));
+        }
+    }
+
+    private onCurrencyChanged(value: any): void {
+        if (this.label != null) {
+
+            this.label.string = value.toString();
         }
     }
 }

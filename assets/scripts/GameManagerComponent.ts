@@ -1,5 +1,6 @@
 import { _decorator, Component, Node } from 'cc';
 import { GameState } from './GameState';
+import { interval } from 'rxjs';
 const { ccclass, property } = _decorator;
 
 @ccclass('GameManagerComponent')
@@ -31,5 +32,11 @@ export class GameManagerComponent extends Component {
         else {
             this.node.destroy();
         }
+    }
+
+    protected start(): void {
+        interval(1000).subscribe(value => {
+            this.gameState.currency++;
+        });
     }
 }
