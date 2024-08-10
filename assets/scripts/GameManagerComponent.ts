@@ -6,12 +6,6 @@ const { ccclass, property } = _decorator;
 @ccclass('GameManagerComponent')
 export class GameManagerComponent extends Component {
 
-    @property(Node)
-    towerBuilding: Node = null;
-
-    @property(Node)
-    signPostBtn: Node = null;
-
     @property(JsonAsset)
     initialState: JsonAsset = null;
 

@@ -18,6 +18,16 @@ export class GameState {
     buildings: string[] = [];
     heroes: string[] = [];
 
+    public onSelectedBuildingChanged$ = new Subject();
+    private _selectedBuilding = '';
+    public get selectedBuilding() {
+        return this._selectedBuilding;
+    }
+    public set selectedBuilding(value) {
+        this._selectedBuilding = value;
+        this.onSelectedBuildingChanged$.next(this._selectedBuilding);
+    }
+
     constructor() {
 
     }
