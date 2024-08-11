@@ -4589,6 +4589,13 @@
     "__prefab": {
       "__id__": 233
     },
+    "heroCardPrefab": {
+      "__uuid__": "ef7e72cb-385b-417e-aa94-85e90f12d885",
+      "__expectedType__": "cc.Prefab"
+    },
+    "heroListNode": {
+      "__id__": 84
+    },
     "_id": ""
   },
   {
@@ -4604,6 +4611,7 @@
       "__id__": 0
     },
     "fileId": "44b0YXUc5MuJcF64nrSOCV",
+    "instance": null,
     "targetOverrides": [],
     "nestedPrefabInstanceRoots": [
       {
